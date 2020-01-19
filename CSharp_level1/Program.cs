@@ -6,19 +6,34 @@ namespace CSharp_level1
     {
         static void Main(string[] args)
         {
-            Console.Write("Ваше имя:");
-            var a = Console.ReadLine();
+            Console.WriteLine("Задача №1: найти минимальное число из трёх.");
+            Console.Write("Введите первое число:");
+            var a = Int32.Parse(Console.ReadLine());
+            Console.Write("Введите второе число:");
+            var b = Int32.Parse(Console.ReadLine());
+            Console.Write("Введите третье число:");
+            var c = Int32.Parse(Console.ReadLine());
 
-            Console.Write("Ваша фамилия:");
-            var b = Console.ReadLine();
+            int j;
+            int g;
+            if (a < b)
+            {
+                j = a;
+            }
+            else
+            {
+                j = b;
+            }
 
-            Console.Write("Ваш возраст:");
-            var c = Console.ReadLine();
-
-            Console.WriteLine("Имя:" + a + " Фамилия:" + b + " Возраст:" + c);
-            Console.WriteLine("Имя:" + a + " Фамилия:" + b + " Возраст:" + string.Format(c));
-            Console.WriteLine($"Имя:{a} Фамилия:{b} Возраст:{c}");
-            Console.ReadKey();
+            if (j < c)
+            {
+                g = j;
+            }
+            else
+            {
+                g = c;
+            }
+            Console.Write("Наименьшее число: " + g);
         }
     }
 }
