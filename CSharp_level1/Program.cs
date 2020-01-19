@@ -14,6 +14,24 @@ namespace CSharp_level1
             Console.Write("Введите третье число:");
             var c = Int32.Parse(Console.ReadLine());
 
+            MinNum(a, b, c);
+
+            Console.WriteLine("Задача №2: посчитать количество цифр в целом положительном числе.");
+            Console.Write("Введите число для подсчёта цифр:");
+            var d = Int32.Parse(Console.ReadLine());
+
+            int i = 0;
+            while (d > 0)
+            {
+                i++;
+                d /= 10;
+            }
+            Console.WriteLine("Количество чисел равно: " + i);
+
+        }
+
+        private static void MinNum(int a, int b, int c)
+        {
             int j;
             int g;
             if (a < b)
@@ -33,7 +51,7 @@ namespace CSharp_level1
             {
                 g = c;
             }
-            Console.Write("Наименьшее число: " + g);
+            Console.WriteLine("Наименьшее число: " + g);
         }
     }
 }
